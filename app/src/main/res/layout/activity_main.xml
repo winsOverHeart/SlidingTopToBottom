@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.manmohan.slidingtoptobottom.MainActivity">
+
+    <include
+        android:id="@+id/actionBar_T"
+        layout="@layout/custom_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/linearLayout1"
+        android:layout_below="@id/actionBar_T"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"></LinearLayout>
+
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/viewImage"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:src="@mipmap/ic_launcher"/>
+    <VideoView
+        android:layout_below="@id/viewImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/videoPreview"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:hint="Please enter numbers"
+        android:id="@+id/demo_ET"/>
+
+    <!--<SlidingDrawer-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:id="@+id/SlidingDrawer"-->
+        <!--android:foregroundGravity="top"-->
+        <!--android:handle="@+id/slideButton"-->
+        <!--android:content="@+id/contentLayout"-->
+        <!--android:padding="10dip"-->
+        <!--android:layout_height="250dip"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_below="@+id/actionBar_T">-->
+        <!--<Button android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/slideButton"-->
+            <!--android:background="@drawable/arrow">-->
+        <!--</Button>-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:id="@+id/contentLayout"-->
+            <!--android:orientation="vertical"-->
+            <!--android:padding="10dip"-->
+            <!--android:background="@android:color/darker_gray"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<Button-->
+                <!--android:id="@+id/Button01"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="2dp"-->
+                <!--android:text="Option1">-->
+            <!--</Button>-->
+
+            <!--<Button android:id="@+id/Button03"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="2dp"-->
+                <!--android:text="Option3">-->
+            <!--</Button>-->
+            <!--<Button android:id="@+id/Button04"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="2dp"-->
+                <!--android:text="Option4">-->
+            <!--</Button>-->
+        <!--</LinearLayout>-->
+    <!--</SlidingDrawer>-->
+    <SlidingDrawer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:content="@+id/linearLayout"
+        android:handle="@+id/button"
+        android:id="@+id/slidingDrawer"
+        android:layout_alignTop="@id/linearLayout1"
+        android:rotation="180"
+        android:foregroundGravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:rotation="180"
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.49"
+                android:orientation="horizontal">
+                <GridView
+                    android:id="@+id/gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:columnWidth="90dp"
+                    android:numColumns="auto_fit"
+                    android:verticalSpacing="10dp"
+                    android:horizontalSpacing="10dp"
+                    android:stretchMode="columnWidth"
+
+                    android:gravity="center">
+                </GridView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.02"
+                android:orientation="horizontal"
+                android:layout_below="@id/gridview"
+                android:background="@android:color/darker_gray">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.49"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/editText"
+                    android:layout_weight="1" />
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/list_view">
+
+                </ListView>
+
+            </LinearLayout>
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:gravity="top"
+            android:visibility="invisible"
+            android:scaleType="fitXY"
+            android:src="@drawable/arrow_up_icon"
+            android:background="@null"
+            />
+    </SlidingDrawer>
+</RelativeLayout>

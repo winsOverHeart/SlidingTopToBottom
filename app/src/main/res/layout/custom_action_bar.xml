@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/actionBar_T"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/holo_blue_light"
+    app:contentInsetEnd="0dp"
+    app:contentInsetStart="0dp">
+
+    <!--android:paddingBottom="8dp"-->
+    <!--android:paddingTop="8dp"-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/drawer_IB"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:paddingLeft="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/settings_white" />
+
+        <TextView
+            android:id="@+id/place_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/drawer_LL"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:paddingLeft="5dp"-->
+        <!--android:onClick="onOpenDrawer"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<ImageButton-->
+        <!--android:id="@+id/drawer_IB"-->
+        <!--android:layout_width="15dp"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:background="@null"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:src="@drawable/settings_white" />-->
+
+        <!--&lt;!&ndash;android:layout_width="15dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="30dp"&ndash;&gt;-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/drawer_IV"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="@null"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:text="My Roster"-->
+        <!--android:textColor="@android:color/white"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<ImageButton-->
+        <!--android:id="@+id/imageButton"-->
+        <!-- -->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginEnd="25dp"-->
+        <!--android:layout_marginRight="25dp"-->
+        <!--android:background="@null"-->
+        <!--android:onClick="onSos"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:src="@drawable/sos150x15" />-->
+
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>
